@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>Formulaire</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+</head>
+<body>
+
+    <div id="signup-form">
+        
+         <div id="signup-inner">
+        
+        	<div class="clearfix" id="header">
+        	
+        		<img id="signup-icon" src="./images/signup.jpg" alt="" />
+        
+                <h1> Bonjour<br/>signup </h1> <br><br><br>
+
+            
+            </div>
+                       <form  action="page.php" onsubmit="return validForm(this)">
+            	
+               <p>
+
+                <label>Your Name* :</label>
+                <input id='name' type='text'  name='name'  required pattern="[0-9a-zA-Z-\.]{3,12}"/>
+                   </p>
+                                 
+                <p>
+                <label >Age*:</label>
+                <input id="age" type="number" name="age" min="10" max="120"  size="2"  required="required"required title="your age between 10-120"/>
+                </p>
+                
+
+                <p>
+
+                <label>Email Adress* :</label>
+                <input id="email" type="email" name="email" value=""size="30" onchange="validemail()" />
+                </p>
+                
+
+                <p>
+                <label >password:</label>
+                <input id="password" type="password" name="password" value=''onchange="validpassword()" title= "minimum eight characters, at least one uppercase letter, one lowercase letter and one number:"/>
+                </p>
+             
+
+                <p>
+                <label>Phone*:</label>
+                <input id="phone" type="number" name="phone"min="11111111"max="99999999" value=""placeholder="+216" required="required"/>
+                </p>     
+                               
+                         <p>
+                <label for ="comments">comments :</label>
+                <textarea name="comments" id="comments" cols="30" rows="10"required="required"></textarea>
+                </p>
+                
+               <p>
+
+                <button type="submit" value="Valider" >Send</button>
+                <button id="onreset" type="reset" onclick="rest()">Reset</button>
+                </p>
+                
+            </form>
+            
+		<div>
+		<p>* Required Fields<br/>
+		NOTE: You must activate your account after sign up</p>
+		</div>
+
+
+            </div>
+                </div>
+        
+    </div>
+    <script src="js/doc.js"> </script>
+
+  
+</body>
+</html>
+
